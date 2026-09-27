@@ -2,13 +2,14 @@
   "name": "getting-started-typescript",
   "type": "module",
   "dependencies": {
-    "tsx": "4.23.15",
-    "webdriverio": "9.32.0"
+    "playwright": "1.63.0",
+    "tsx": "4.23.15"
   },
   "devDependencies": {
     "typescript": "5.9.3"
   },
   "scripts": {
-    "test": "tsx github_should_find_webdriverio.ts"
+    "pretest": "playwright install chromium",
+    "test": "tsx github_should_find_playwright.ts"
   }
 }
