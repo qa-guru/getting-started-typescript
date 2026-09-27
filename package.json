@@ -3,13 +3,18 @@
   "type": "module",
   "dependencies": {
     "playwright": "1.63.0",
-    "tsx": "4.23.15"
+    "selenium-webdriver": "4.49.0",
+    "tsx": "4.23.15",
+    "webdriverio": "9.32.0"
   },
   "devDependencies": {
     "typescript": "5.9.3"
   },
   "scripts": {
     "pretest": "playwright install chromium",
-    "test": "tsx github_should_find_playwright.ts"
+    "test": "tsx github_should_find_selenium.ts && tsx github_should_find_webdriverio.ts && tsx github_should_find_playwright.ts",
+    "test:selenium": "tsx github_should_find_selenium.ts",
+    "test:webdriverio": "tsx github_should_find_webdriverio.ts",
+    "test:playwright": "tsx github_should_find_playwright.ts"
   }
 }
